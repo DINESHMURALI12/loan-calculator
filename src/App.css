@@ -1,0 +1,82 @@
+/* Animation for fading in elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for pulsing elements */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-animation {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Ensure links don't have the default underline */
+a {
+  text-decoration: none;
+}
+
+/* Additional styling for table hover states */
+.MuiTableRow-root.MuiTableRow-hover:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transition: background-color 0.2s ease;
+}
+
+/* Styling for currency chips */
+.MuiChip-root {
+  font-weight: normal;
+  transition: all 0.2s ease;
+}
+
+.MuiChip-root:hover {
+  transform: translateY(-1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode scrollbar adjustments */
+.MuiCssBaseline-root:has(+ .MuiBox-root.dark) ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.MuiCssBaseline-root:has(+ .MuiBox-root.dark) ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.MuiCssBaseline-root:has(+ .MuiBox-root.dark) ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
